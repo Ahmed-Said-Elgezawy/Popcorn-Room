@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import  Swiper  from 'swiper';
 import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
@@ -14,11 +14,14 @@ Swiper.use([Navigation,Keyboard,Mousewheel]);
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit , AfterViewInit{
 
 
 serviceCinema=inject(MovieService)
   constructor(private router:Router) {}
+  ngAfterViewInit(): void {
+    this.swipertwo()
+  }
 
   movies: any[] = [];
   loading = true;

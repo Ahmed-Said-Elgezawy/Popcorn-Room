@@ -245,7 +245,7 @@
     text-shadow: 1px 5px 0 black;
 }
 
- .swiper-button-next::after,
+.swiper-button-next::after,
 .swiper-button-prev::after {
   content: "";
 } 

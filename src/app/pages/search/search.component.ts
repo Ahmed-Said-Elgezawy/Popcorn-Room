@@ -16,9 +16,7 @@ export class SearchComponent implements OnInit {
 
 constructor(private router: Router) {}
 ngOnInit(): void {
-
     this.getAllmovies();
-  
 }
 
 
