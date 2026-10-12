@@ -12,7 +12,7 @@ export class MovieService {
   public search = new BehaviorSubject<string>('')
 
 
-    private apiUrl = 'http://localhost:3000/api/movies'
+    private apiUrl = '/api/movies'
     // private apiUrl = 'https://popcorn-room.onrender.com/api/movies'
 
       getMovies(): Observable<any> {
